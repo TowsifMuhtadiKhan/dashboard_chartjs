@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="dashboard.css"
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Brand Name</span>
+                    </a>
+                </li>  
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Dashboard</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Brand Name</span>
+                    </a>
+                </li> 
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Brand Name</span>
+                    </a>
+                </li> 
+
+            </ul>
+        </div>
+
+        <!--main-->
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="grid-outline"></ion-icon>
+                </div>
+                <!--search-->
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search Here">
+                        <ion-icon name="search-circle-outline"></ion-icon>
+                    </label>
+                </div>
+                <!--user image-->
+                <div class="user">
+                    <img src="user.jpg">
+                </div>
+            </div>
+            <!--cards--> 
+            <div class="cardBox">
+                <div class="card">
+                    <div>
+                        <div class="number">1054</div>
+                        <div class="cardname">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">1054</div>
+                        <div class="cardname">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">1054</div>
+                        <div class="cardname">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">1054</div>
+                        <div class="cardname">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">1054</div>
+                        <div class="cardname">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+                <div class="card">
+                    <div>
+                        <div class="number">1054</div>
+                        <div class="cardname">Daily Views</div>
+                    </div>
+                    <div class="iconBox">
+                        <ion-icon name="eye-outline"></ion-icon>
+                    </div>
+                </div>
+            </div>
+             <!--Add Charts-->
+             <div class="graphBox">
+               
+                <div class="box"> <canvas id="myChart1"></canvas></div>
+               
+                <div class="box"> <canvas id="myChart2"></canvas></div>
+
+             </div>
+
+
+
+        </div>
+
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="my_chart.js"></script>
+    
+
+
+    <script>
+          //Menu Toggle
+          let toggle = document.querySelector('.toggle');
+          let navigation = document.querySelector('.navigation');
+          let main = document.querySelector('.main');
+
+          toggle.onclick = function(){
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+          }
+
+
+        //add hovered class in selected list item
+        let list = document.querySelectorAll('.navigation li');
+        function activelink(){
+            list.forEach((item)=>
+            item.classList.remove('hovered'));
+            this.classList.add('hovered');
+         }
+         list.forEach((item)=>
+         item.addEventListener('mouseover', activelink))
+    </script>
+    
+</body>
+</html>
